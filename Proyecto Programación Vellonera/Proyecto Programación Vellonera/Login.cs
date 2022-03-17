@@ -16,5 +16,7 @@ namespace Proyecto_Programación_Vellonera
         {
             InitializeComponent();
         }
+
+
     }
 }

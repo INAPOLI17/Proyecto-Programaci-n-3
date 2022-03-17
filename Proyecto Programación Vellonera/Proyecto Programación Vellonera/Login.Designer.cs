@@ -28,12 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.NameUser = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.lblusuario = new System.Windows.Forms.Label();
+            this.lblpass = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // NameUser
+            // 
+            this.NameUser.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NameUser.Location = new System.Drawing.Point(223, 132);
+            this.NameUser.Name = "NameUser";
+            this.NameUser.Size = new System.Drawing.Size(277, 36);
+            this.NameUser.TabIndex = 0;
+            // 
+            // Password
+            // 
+            this.Password.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Password.Location = new System.Drawing.Point(223, 206);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(277, 36);
+            this.Password.TabIndex = 1;
+            // 
+            // lblusuario
+            // 
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblusuario.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblusuario.Location = new System.Drawing.Point(67, 102);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(127, 29);
+            this.lblusuario.TabIndex = 2;
+            this.lblusuario.Text = "USUARIO";
+            // 
+            // lblpass
+            // 
+            this.lblpass.AutoSize = true;
+            this.lblpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblpass.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblpass.Location = new System.Drawing.Point(35, 175);
+            this.lblpass.Name = "lblpass";
+            this.lblpass.Size = new System.Drawing.Size(159, 29);
+            this.lblpass.TabIndex = 3;
+            this.lblpass.Text = "PASSWORD";
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(512, 296);
+            this.Controls.Add(this.lblpass);
+            this.Controls.Add(this.lblusuario);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.NameUser);
+            this.Name = "Login";
             this.Text = "Login";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private TextBox NameUser;
+        private TextBox Password;
+        private Label lblusuario;
+        private Label lblpass;
     }
 }

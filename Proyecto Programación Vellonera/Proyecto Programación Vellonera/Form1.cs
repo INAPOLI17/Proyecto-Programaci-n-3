@@ -6,5 +6,16 @@ namespace Proyecto_Programación_Vellonera
         {
             InitializeComponent();
         }
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            //Prueba desde version Ray
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

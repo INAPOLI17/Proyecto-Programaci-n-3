@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+=======
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+>>>>>>> Stashed changes
             this.panelReportes = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,7 +57,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+<<<<<<< Updated upstream
             this.panel4.SuspendLayout();
+=======
+            this.panelHome.SuspendLayout();
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -81,7 +91,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(61)))), ((int)(((byte)(97)))));
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panelHome);
             this.panel3.Controls.Add(this.panelReportes);
             this.panel3.Controls.Add(this.panelToken);
             this.panel3.Controls.Add(this.panelCliente);
@@ -91,6 +101,7 @@
             this.panel3.Size = new System.Drawing.Size(233, 551);
             this.panel3.TabIndex = 1;
             // 
+<<<<<<< Updated upstream
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox5);
@@ -117,6 +128,30 @@
             this.label5.Size = new System.Drawing.Size(162, 43);
             this.label5.TabIndex = 0;
             this.label5.Text = "Reportes";
+=======
+            // panelHome
+            // 
+            this.panelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHome.BackColor = System.Drawing.Color.Gray;
+            this.panelHome.Controls.Add(this.pictureBox5);
+            this.panelHome.Location = new System.Drawing.Point(154, 485);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(79, 66);
+            this.panelHome.TabIndex = 4;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(5, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(67, 57);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+>>>>>>> Stashed changes
             // 
             // panelReportes
             // 
@@ -215,6 +250,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(69, 62);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+<<<<<<< Updated upstream
             // 
             // Musica
             // 
@@ -228,6 +264,21 @@
             // 
             // label1
             // 
+=======
+            // 
+            // Musica
+            // 
+            this.Musica.AutoSize = true;
+            this.Musica.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Musica.Location = new System.Drawing.Point(68, 13);
+            this.Musica.Name = "Musica";
+            this.Musica.Size = new System.Drawing.Size(132, 43);
+            this.Musica.TabIndex = 0;
+            this.Musica.Text = "Música";
+            // 
+            // label1
+            // 
+>>>>>>> Stashed changes
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -280,8 +331,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
+<<<<<<< Updated upstream
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+=======
+            this.panelHome.ResumeLayout(false);
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelReportes.ResumeLayout(false);
             this.panelReportes.PerformLayout();
@@ -320,10 +375,13 @@
         private Panel panelMusica;
         private PictureBox pictureBox1;
         private Label Musica;
-        private Panel panel4;
+        private Panel panelHome;
         private PictureBox pictureBox5;
+<<<<<<< Updated upstream
         private Label label5;
         private Label label6;
         private DataGridView dataGridView1;
+=======
+>>>>>>> Stashed changes
     }
 }

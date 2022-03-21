@@ -108,6 +108,7 @@
             this.Controls.Add(this.NameUser);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +122,10 @@
         private Label lblpass;
         private Button btninicio;
         private Label label1;
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

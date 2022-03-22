@@ -39,8 +39,11 @@ namespace Proyecto_Programación_Vellonera
 
         private void button4_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog1 = new FolderBrowserDialog();
-            folderBrowserDialog1.ShowDialog();
+            //folderBrowserDialog1 = new FolderBrowserDialog();
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = "C:\\Hits";
+            openFileDialog1.ShowDialog();
+            
             
         }
 
@@ -60,6 +63,19 @@ namespace Proyecto_Programación_Vellonera
         {
             Musica musica = new Musica();
             musica.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            cliente.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Token token = new Token();
+            token.Show();
+
         }
     }
 }

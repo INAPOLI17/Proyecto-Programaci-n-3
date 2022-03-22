@@ -55,6 +55,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -178,6 +179,7 @@
             this.label3.Size = new System.Drawing.Size(116, 43);
             this.label3.TabIndex = 0;
             this.label3.Text = "Token";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panelCliente
             // 
@@ -205,6 +207,7 @@
             this.label2.Size = new System.Drawing.Size(145, 43);
             this.label2.TabIndex = 0;
             this.label2.Text = "Clientes";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panelMusica
             // 
@@ -328,6 +331,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(543, 313);
             this.dataGridView1.TabIndex = 0;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -392,5 +399,6 @@
         private Button button5;
         private Button button4;
         private FolderBrowserDialog folderBrowserDialog1;
+        private OpenFileDialog openFileDialog1;
     }
 }

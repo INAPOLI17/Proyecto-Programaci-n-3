@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+
 namespace Proyecto_Programación_Vellonera
 {
     
@@ -46,6 +51,31 @@ namespace Proyecto_Programación_Vellonera
             //Playlist
             string sqlString = "Select * from Playlist";
             dataGridView1.DataSource = con.consulta(sqlString);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Imprimir
+            SaveFileDialog impReporte = new SaveFileDialog();
+            impReporte.FileName = "Reporte" + DateTime.Now.ToString("dd-mm-yyyy") + ".pdf";
+            impReporte.ShowDialog();
+
+            if(impReporte.ShowDialog()== DialogResult.OK)
+            {
+                using (FileStream fileStream = new FileStream(impReporte.FileName, FileMode.Create))
+                {
+                    Document doc = new Document(PageSize.A4, 25, 25, 25, 25);
+
+                    PdfWriter writer = PdfWriter.GetInstance(doc, fileStream);
+
+                    doc.Open();
+                    doc.Add(new Phrase("Prueba PDF"));
+                    doc.Close();
+                    fileStream.Close();
+                }
+                
+
+            }
         }
     }
 }

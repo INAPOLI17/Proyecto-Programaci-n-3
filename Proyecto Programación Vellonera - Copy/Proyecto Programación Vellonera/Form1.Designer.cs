@@ -150,6 +150,7 @@
             this.label4.Size = new System.Drawing.Size(162, 43);
             this.label4.TabIndex = 0;
             this.label4.Text = "Reportes";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panelToken
             // 
@@ -231,6 +232,7 @@
             this.Musica.Size = new System.Drawing.Size(132, 43);
             this.Musica.TabIndex = 0;
             this.Musica.Text = "Música";
+            this.Musica.Click += new System.EventHandler(this.Musica_Click);
             // 
             // label1
             // 

@@ -49,5 +49,17 @@ namespace Proyecto_Programación_Vellonera
             string sqlUrl = "Select * from Cancion";
             dataGridView1.DataSource = con.consulta(sqlUrl);
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Reporte rep = new Reporte();
+            rep.Show();
+        }
+
+        private void Musica_Click(object sender, EventArgs e)
+        {
+            Musica musica = new Musica();
+            musica.Show();
+        }
     }
 }

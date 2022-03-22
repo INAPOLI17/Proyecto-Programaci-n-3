@@ -10,7 +10,7 @@ namespace Proyecto_Programación_Vellonera
 {
     public class Conexión
     {
-        SqlConnection conectar = new SqlConnection(@"Data Source = local; Initial Catalog = Musica; Integrared Security = True;");
+        SqlConnection conectar = new SqlConnection(@"Data Source = (local); Initial Catalog = Musica; Integrated Security = True;");
 
         public DataTable consulta (string str)
         {

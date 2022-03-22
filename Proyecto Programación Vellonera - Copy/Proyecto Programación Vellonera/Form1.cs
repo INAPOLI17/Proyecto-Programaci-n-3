@@ -6,6 +6,7 @@ namespace Proyecto_Programación_Vellonera
     public partial class Form1 : Form
     {
         //WMPLib.WindowaMediaPlayer wplayer;
+        Conexión con = new Conexión();
         public Form1() 
         {
             InitializeComponent();
@@ -41,6 +42,12 @@ namespace Proyecto_Programación_Vellonera
             folderBrowserDialog1 = new FolderBrowserDialog();
             folderBrowserDialog1.ShowDialog();
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string sqlUrl = "Select * from Cancion";
+            dataGridView1.DataSource = con.consulta(sqlUrl);
         }
     }
 }

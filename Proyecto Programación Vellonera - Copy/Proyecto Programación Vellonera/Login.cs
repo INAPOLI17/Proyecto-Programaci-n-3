@@ -16,5 +16,21 @@ namespace Proyecto_Programación_Vellonera
         {
             InitializeComponent();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            Conexión con = new Conexión();
+            
+            if(con.login(txtUser.Text,txtPass.Text) == true){
+
+                Form1 inicio = new Form1();
+                inicio.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos");
+            }
+        }
     }
 }

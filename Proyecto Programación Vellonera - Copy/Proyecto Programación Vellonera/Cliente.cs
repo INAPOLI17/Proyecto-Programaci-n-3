@@ -36,5 +36,10 @@ namespace Proyecto_Programación_Vellonera
         {
 
         }
+
+        private void Cliente_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = con.consulta("Select idCli as Cliente, usuCli as Usuario, plaCli as Plataforma");
+        }
     }
 }

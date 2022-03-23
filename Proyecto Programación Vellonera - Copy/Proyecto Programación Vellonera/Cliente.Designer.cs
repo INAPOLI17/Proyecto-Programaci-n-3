@@ -36,6 +36,8 @@
             this.txtPlataforma = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,8 +69,10 @@
             // 
             // txtIdCliente
             // 
+            this.txtIdCliente.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtIdCliente.Location = new System.Drawing.Point(156, 60);
             this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.ReadOnly = true;
             this.txtIdCliente.Size = new System.Drawing.Size(100, 23);
             this.txtIdCliente.TabIndex = 3;
             // 
@@ -106,11 +110,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(336, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(331, 185);
+            this.dataGridView1.TabIndex = 8;
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 278);
+            this.ClientSize = new System.Drawing.Size(730, 255);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPlataforma);
@@ -121,6 +135,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Cliente";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Cliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +152,6 @@
         private TextBox txtPlataforma;
         private Button button1;
         private Button button2;
+        private DataGridView dataGridView1;
     }
 }

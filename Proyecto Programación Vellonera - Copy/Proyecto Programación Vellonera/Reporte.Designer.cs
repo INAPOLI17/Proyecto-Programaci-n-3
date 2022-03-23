@@ -83,12 +83,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(167, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(412, 287);
             this.dataGridView1.TabIndex = 4;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(413, 348);
+            this.button5.Location = new System.Drawing.Point(343, 348);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 5;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(673, 450);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
@@ -108,7 +108,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Reporte";
-            this.Text = "Reporte";
+            this.Text = "Reportes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

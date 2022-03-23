@@ -28,7 +28,7 @@ namespace Proyecto_Programación_Vellonera
         private void button1_Click(object sender, EventArgs e)
         {   
             //Clientes
-            string sqlString = "Select * from Cliente";
+            string sqlString = "Select idCli as Id, usuCli as Usuario, plaCli as Plataforma from Cliente";
             dataGridView1.DataSource = con.consulta(sqlString);
             tipo = 1;
         }
@@ -36,7 +36,7 @@ namespace Proyecto_Programación_Vellonera
         private void button2_Click(object sender, EventArgs e)
         {
             //Canciones
-            string sqlString = "Select * from Cancion";
+            string sqlString = "Select idCan as Id, nomCan as Titulo, artCan as Artista from Cancion";
             dataGridView1.DataSource = con.consulta(sqlString);
             tipo = 2;
 
@@ -45,7 +45,7 @@ namespace Proyecto_Programación_Vellonera
         private void button3_Click(object sender, EventArgs e)
         {
             //Más escuchadas
-            string sqlString = "Select * from Historial";
+            string sqlString = "Select idCli as 'Id Cliente', idCan as 'Id Cancion', timPlay as 'Tiempo Reproducción' from Historial";
             dataGridView1.DataSource = con.consulta(sqlString);
             tipo = 3;
         }
@@ -53,7 +53,7 @@ namespace Proyecto_Programación_Vellonera
         private void button4_Click(object sender, EventArgs e)
         {
             //Playlist
-            string sqlString = "Select * from Playlist";
+            string sqlString = "Select idCan as 'Id Cancion', numOrd as Orden, idTok as Token from Playlist";
             dataGridView1.DataSource = con.consulta(sqlString);
             tipo = 4;
         }
@@ -77,24 +77,35 @@ namespace Proyecto_Programación_Vellonera
                 Imprimir("Reporte de Playlists", "Id", "Título", "Album");
             }
 
-
-
-
-
         }   
 
             private void Imprimir(string tipoReporte, string par1, string par2, string par3)
         {
             SaveFileDialog impReporte = new SaveFileDialog();
             impReporte.FileName = "Reporte" + DateTime.Now.ToString("dd-mm-yyyy-hh-mm")+".pdf";
-            //impReporte.ShowDialog();
+            
             string paginaTexto = Properties.Resources.plantillaReporte.ToString();
             paginaTexto = paginaTexto.Replace("@Reporte", tipoReporte);
             paginaTexto = paginaTexto.Replace("@Col1", par1);
             paginaTexto = paginaTexto.Replace("@Col2", par2);
             paginaTexto = paginaTexto.Replace("@Col3", par3);
             paginaTexto = paginaTexto.Replace("@Fecha", DateTime.Now.ToString("dd-mm-yyyy      hh:mm tt"));
-            //paginaTexto = paginaTexto.Replace("@Hora", DateTime.Now.ToString("hh-mm tt"));
+
+            string filas = string.Empty;
+           
+             for(int i= 0; i< dataGridView1.Rows.Count -1 ; i++)
+            {
+                filas += "<tr>";
+                filas += "<td>" + dataGridView1.Rows[i].Cells[0].Value.ToString() + "</td>";
+                filas += "<td>" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "</td>";
+                filas += "<td>" + dataGridView1.Rows[i].Cells[2].Value.ToString() + "</td>";
+                filas += "</tr>";
+
+            }
+            
+            
+            paginaTexto = paginaTexto.Replace("@Filas", filas);
+            
 
             if (impReporte.ShowDialog() == DialogResult.OK)
             {

@@ -54,14 +54,16 @@ namespace Proyecto_Programación_Vellonera
                 token.clase = cmbClase.SelectedItem.ToString();
                 token.descripcion = dgvDesc.Rows[1].Cells[1].Value.ToString();
             }
-            if (cmbClase.SelectedItem.ToString() == "Clase A")
+            if (cmbClase.SelectedItem.ToString() == "Clase C")
             {
                 token.idToken = id.ToString();
                 token.clase = cmbClase.SelectedItem.ToString();
                 token.descripcion = dgvDesc.Rows[2].Cells[1].Value.ToString();
             }
 
+            
             cone.ManejoDatos(token, "sp_InsertarTok", "Token");
+            MessageBox.Show("Nuevo token generado");
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

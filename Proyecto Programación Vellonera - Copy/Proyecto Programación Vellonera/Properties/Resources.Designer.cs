@@ -59,5 +59,46 @@ namespace Proyecto_Programación_Vellonera.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///	&lt;title&gt;&quot;Reportes&quot;&lt;/title&gt;
+        ///	&lt;style&gt;
+        ///		table.border {
+        ///			border-collapse: collapse;
+        ///		}
+        ///
+        ///			table.border th {
+        ///				padding: 5px;
+        ///				border: 1px solid black;
+        ///			}
+        ///
+        ///			table.border td {
+        ///				padding: 5px;
+        ///				border: 1px solid black;
+        ///			}
+        ///	&lt;/style&gt; 
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///
+        ///	&lt;table style=&quot;width: 100%&quot;&gt;
+        ///		&lt;tr&gt;
+        ///			&lt;td style=&quot;width: 20%&quot;&gt;
+        ///			&lt;/td&gt;
+        ///
+        ///			&lt;td style=&quot;width: 60%&quot; align=&quot;center&quot;&gt;
+        ///				&lt;table&gt;
+        ///					&lt;tr&gt;
+        ///						&lt;td align=&quot;center&quot;&gt;Vellonera&lt;/td&gt;
+        ///					&lt;/tr&gt;
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string plantillaReporte {
+            get {
+                return ResourceManager.GetString("plantillaReporte", resourceCulture);
+            }
+        }
     }
 }

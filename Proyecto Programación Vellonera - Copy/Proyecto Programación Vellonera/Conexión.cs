@@ -79,5 +79,7 @@ namespace Proyecto_Programación_Vellonera
 
             conectar.Close();
         }
+
+        public bool login ()
     }
 }

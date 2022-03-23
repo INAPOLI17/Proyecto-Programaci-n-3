@@ -20,6 +20,43 @@ namespace Proyecto_Programación_Vellonera
             return tl;
         }
 
+        public void ManejoDatos(ClaDatos datos, string stpsql, string tipo)
+        {
+            SqlCommand cmd = new SqlCommand(stpsql, conectar);
+            conectar.Open();
+            if (tipo == "Token")
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@Id", datos.idToken);
+                cmd.Parameters.AddWithValue("@Clase", datos.clase);
+                cmd.Parameters.AddWithValue("@Descripción", datos.descripcion);
+
+                cmd.ExecuteNonQuery();
+            }
+            if (tipo == "Cliente")
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Id", datos.idCliente);
+                cmd.Parameters.AddWithValue("@Usuario", datos.userName);
+                cmd.Parameters.AddWithValue("@Plataforma", datos.Plataforma);
+                cmd.Parameters.AddWithValue("@Token", datos.idToken);
+
+                cmd.ExecuteNonQuery();
+            }
+            if(tipo == "Play")
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdCan", datos.idCan);
+                cmd.Parameters.AddWithValue("@Orden", datos.orden);
+                cmd.Parameters.AddWithValue("@Token", datos.idToken);
+
+                cmd.ExecuteNonQuery();
+            }
+
+            conectar.Close();
+        }
     }
 }

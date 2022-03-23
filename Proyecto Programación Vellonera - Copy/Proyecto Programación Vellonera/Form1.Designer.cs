@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panelReportes = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,8 +56,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelToken.SuspendLayout();
@@ -88,7 +84,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(61)))), ((int)(((byte)(97)))));
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panelReportes);
             this.panel3.Controls.Add(this.panelToken);
             this.panel3.Controls.Add(this.panelCliente);
@@ -97,33 +92,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(233, 551);
             this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(3, 312);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(223, 69);
-            this.panel4.TabIndex = 4;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(69, 62);
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(68, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 43);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Reportes";
             // 
             // panelReportes
             // 
@@ -136,9 +104,11 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(3, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(69, 62);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             // 
@@ -164,9 +134,11 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(69, 62);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
@@ -192,9 +164,11 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(69, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -220,9 +194,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -348,9 +324,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelReportes.ResumeLayout(false);
             this.panelReportes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -388,9 +361,6 @@
         private Panel panelMusica;
         private PictureBox pictureBox1;
         private Label Musica;
-        private Panel panel4;
-        private PictureBox pictureBox5;
-        private Label label5;
         private Label label6;
         private DataGridView dataGridView1;
         private Button button3;

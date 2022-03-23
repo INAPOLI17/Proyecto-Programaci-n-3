@@ -20,9 +20,15 @@ namespace Proyecto_Programación_Vellonera
 
 //Playlist
 
-        public string idCan { get; set; }
         public string orden { get; set; }
 
+//Cancion
+        
+        public string idCan { get; set; }
+        public string Nombre { get; set; }
+        public string Artista { get; set; }
+        public string Album { get; set; }
+        public string link { get; set; }
 
     }
 }

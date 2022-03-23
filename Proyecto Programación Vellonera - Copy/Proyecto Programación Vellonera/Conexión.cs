@@ -55,6 +55,18 @@ namespace Proyecto_Programación_Vellonera
 
                 cmd.ExecuteNonQuery();
             }
+            if (tipo == "Cancion")
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Id", datos.idCan);
+                cmd.Parameters.AddWithValue("@Nombre", datos.Nombre);
+                cmd.Parameters.AddWithValue("@Artista", datos.Artista);
+                cmd.Parameters.AddWithValue("@Album", datos.Album);
+                cmd.Parameters.AddWithValue("@link", datos.link);
+
+                cmd.ExecuteNonQuery();
+            }
             if (tipo == "Borrar")
             {
                 cmd.CommandType = CommandType.StoredProcedure;

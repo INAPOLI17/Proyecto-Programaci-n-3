@@ -14,7 +14,7 @@ namespace Proyecto_Programación_Vellonera
         public string descripcion { get; set; }
 
 //Cliente
-        public string idCliente { get; set; }
+        public int id { get; set; }
         public string userName { get; set; }
         public string Plataforma { get; set; }
 

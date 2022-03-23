@@ -103,6 +103,7 @@
             this.cmbClase.Name = "cmbClase";
             this.cmbClase.Size = new System.Drawing.Size(244, 34);
             this.cmbClase.TabIndex = 0;
+            this.cmbClase.SelectedIndexChanged += new System.EventHandler(this.cmbClase_SelectedIndexChanged);
             // 
             // Token
             // 

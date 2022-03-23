@@ -38,10 +38,10 @@ namespace Proyecto_Programación_Vellonera
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Id", datos.idCliente);
+                cmd.Parameters.AddWithValue("@Id", datos.id);
                 cmd.Parameters.AddWithValue("@Usuario", datos.userName);
                 cmd.Parameters.AddWithValue("@Plataforma", datos.Plataforma);
-                cmd.Parameters.AddWithValue("@Token", datos.idToken);
+
 
                 cmd.ExecuteNonQuery();
             }
@@ -52,6 +52,15 @@ namespace Proyecto_Programación_Vellonera
                 cmd.Parameters.AddWithValue("@IdCan", datos.idCan);
                 cmd.Parameters.AddWithValue("@Orden", datos.orden);
                 cmd.Parameters.AddWithValue("@Token", datos.idToken);
+
+                cmd.ExecuteNonQuery();
+            }
+            if (tipo == "Borrar")
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Id", datos.id);
+
 
                 cmd.ExecuteNonQuery();
             }

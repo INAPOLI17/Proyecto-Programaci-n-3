@@ -40,30 +40,36 @@ namespace Proyecto_Programación_Vellonera
             Random aleatorio = new Random();
 
             int id = 0;
-            id = aleatorio.Next(100,001);
+            id = aleatorio.Next(100001);
 
-            if (cmbClase.Items.ToString() == "Clase A")
+            if (cmbClase.SelectedItem.ToString() == "Clase A")
             {
                 token.idToken = id.ToString();
                 token.clase = cmbClase.SelectedItem.ToString();
                 token.descripcion = dgvDesc.Rows[0].Cells[1].Value.ToString();
             }
-            if (cmbClase.Items.ToString() == "Clase B")
+            if (cmbClase.SelectedItem.ToString() == "Clase B")
             {
                 token.idToken = id.ToString();
                 token.clase = cmbClase.SelectedItem.ToString();
                 token.descripcion = dgvDesc.Rows[1].Cells[1].Value.ToString();
             }
-            if (cmbClase.Items.ToString() == "Clase A")
+            if (cmbClase.SelectedItem.ToString() == "Clase A")
             {
                 token.idToken = id.ToString();
                 token.clase = cmbClase.SelectedItem.ToString();
                 token.descripcion = dgvDesc.Rows[2].Cells[1].Value.ToString();
             }
 
+            cone.ManejoDatos(token, "sp_InsertarTok", "Token");
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbClase_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

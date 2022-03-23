@@ -46,5 +46,22 @@ namespace Proyecto_Programación_Vellonera
         {
             dataGridView1.DataSource = con.consulta("Select idCan as ID, nomCan as Título, artCan as Artista, albCan as Album, linCan as Ubicación from Cancion");
         }
+        /*
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        */
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            txtIdCancion.Text = dataGridView1.SelectedCells[0].Value.ToString();
+            txtNomCan.Text = dataGridView1.SelectedCells[1].Value.ToString();
+            txtCanArt.Text = dataGridView1.SelectedCells[2].Value.ToString();
+            txtAlbCan.Text = dataGridView1.SelectedCells[3].Value.ToString();
+            txtCanLin.Text = dataGridView1.SelectedCells[4].Value.ToString();
+
+        }
+
+
     }
 }

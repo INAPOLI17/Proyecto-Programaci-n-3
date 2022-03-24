@@ -53,10 +53,10 @@ namespace Proyecto_Programación_Vellonera
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + " " + dataGridView1.SelectedRows[0].Cells[1].Value.ToString() + " " + dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
-           // txtIdCliente.Text = dataGridView1.SelectedCells[0].Value.ToString();
-            //txtUsuario.Text = dataGridView1.SelectedCells[1].Value.ToString();
-            //txtPlataforma.Text = dataGridView1.SelectedCells[2].Value.ToString();
+            //MessageBox.Show(dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + " " + dataGridView1.SelectedRows[0].Cells[1].Value.ToString() + " " + dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
+            txtIdCliente.Text = dataGridView1.SelectedCells[0].Value.ToString();
+            txtUsuario.Text = dataGridView1.SelectedCells[1].Value.ToString();
+            txtPlataforma.Text = dataGridView1.SelectedCells[2].Value.ToString();
         }
 
         private void btneliminar_Click(object sender, EventArgs e)

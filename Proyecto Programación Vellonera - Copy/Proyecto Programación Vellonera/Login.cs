@@ -12,6 +12,7 @@ namespace Proyecto_Programación_Vellonera
 {
     public partial class Login : Form
     {
+        Conexión con = new Conexión();
         public Login()
         {
             InitializeComponent();
@@ -19,12 +20,13 @@ namespace Proyecto_Programación_Vellonera
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Conexión con = new Conexión();
             
-            if(con.login(txtUser.Text,txtPass.Text) == true){
+            
+            if(con.Login(txtUser.Text,txtPass.Text) == true){
 
                 Form1 inicio = new Form1();
                 inicio.Show();
+                inicio.rol = txtUser.Text;
                 this.Hide();
             }
             else

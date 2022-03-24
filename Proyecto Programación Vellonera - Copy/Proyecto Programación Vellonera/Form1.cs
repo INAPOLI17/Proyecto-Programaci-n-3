@@ -7,6 +7,7 @@ namespace Proyecto_Programación_Vellonera
     {
         //WMPLib.WindowaMediaPlayer wplayer;
         Conexión con = new Conexión();
+        public string rol;
         public Form1() 
         {
             InitializeComponent();
@@ -51,6 +52,20 @@ namespace Proyecto_Programación_Vellonera
         {
             string sqlUrl = "Select * from Cancion";
             dataGridView1.DataSource = con.consulta(sqlUrl);
+            if (rol != null)
+            {
+                if(rol == "Ray01")
+                {
+                    
+                } else if( rol == "Ap17")
+                {
+                    panelReportes.Visible = false;
+                    panelToken.Visible = false;
+                    panelReportes.Enabled = false;
+                    label4.Enabled = false;
+               
+                }
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)

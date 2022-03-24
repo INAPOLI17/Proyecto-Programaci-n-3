@@ -112,6 +112,7 @@
             this.ClientSize = new System.Drawing.Size(504, 424);
             this.Controls.Add(this.groupBox1);
             this.Name = "Token";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Token";
             this.Load += new System.EventHandler(this.Token_Load);
             this.groupBox1.ResumeLayout(false);

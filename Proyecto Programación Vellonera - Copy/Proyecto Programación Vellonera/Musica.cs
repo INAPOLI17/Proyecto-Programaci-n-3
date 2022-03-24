@@ -62,6 +62,16 @@ namespace Proyecto_Programación_Vellonera
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, EventArgs e)
+        {
+            txtIdCancion.Text = dataGridView1.SelectedCells[0].Value.ToString();
+            txtNomCan.Text = dataGridView1.SelectedCells[1].Value.ToString();
+            txtCanArt.Text = dataGridView1.SelectedCells[2].Value.ToString();
+            txtAlbCan.Text = dataGridView1.SelectedCells[3].Value.ToString();
+            txtCanLin.Text = dataGridView1.SelectedCells[4].Value.ToString();
+
+        }
+
 
     }
 }

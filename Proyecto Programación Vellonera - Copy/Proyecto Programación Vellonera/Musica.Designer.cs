@@ -185,6 +185,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Musica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Musica";
             this.Load += new System.EventHandler(this.Musica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

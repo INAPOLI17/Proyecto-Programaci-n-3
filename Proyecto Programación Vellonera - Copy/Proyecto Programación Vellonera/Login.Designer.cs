@@ -38,39 +38,41 @@
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUser.Location = new System.Drawing.Point(170, 90);
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUser.Location = new System.Drawing.Point(154, 90);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(267, 31);
+            this.txtUser.Size = new System.Drawing.Size(220, 23);
             this.txtUser.TabIndex = 0;
             // 
             // txtPass
             // 
-            this.txtPass.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPass.Location = new System.Drawing.Point(170, 167);
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPass.Location = new System.Drawing.Point(154, 167);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(267, 31);
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.PlaceholderText = "Password";
+            this.txtPass.Size = new System.Drawing.Size(220, 23);
             this.txtPass.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(63, 89);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(101, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 30);
+            this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "USUARIO";
+            this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(30, 166);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(81, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 30);
+            this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "CONTRSEÑA";
+            this.label2.Text = "Contraseña";
             // 
             // Vellonera
             // 
@@ -84,7 +86,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(281, 232);
+            this.btnEntrar.Location = new System.Drawing.Point(165, 215);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(156, 41);
             this.btnEntrar.TabIndex = 5;
@@ -104,6 +106,7 @@
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

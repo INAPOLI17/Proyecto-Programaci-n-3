@@ -80,6 +80,20 @@ namespace Proyecto_Programación_Vellonera
             conectar.Close();
         }
 
-        public bool login ()
+        public bool Login(string user, string pass)
+        {
+            DataTable dt = new DataTable();
+            dt = consulta("Select * from Login where userName='" + user + "' and pass='" + pass+"'");
+            dt.TableName = "Login";
+            MessageBox.Show(dt.Rows.Count.ToString());
+            if (dt.Rows.Count > 0)
+            {
+                return true;
+            }
+
+            else {
+                return false;
+            }
+        }
     }
 }

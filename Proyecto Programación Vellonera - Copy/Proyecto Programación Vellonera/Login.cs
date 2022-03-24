@@ -20,20 +20,22 @@ namespace Proyecto_Programación_Vellonera
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            ClaDatos permiso = new ClaDatos();
-            
-            
-            if(con.Login(txtUser.Text,txtPass.Text) == true){
-
+            if(con.Login(txtUser.Text,txtPass.Text)){
+                
                 Form1 inicio = new Form1();
                 inicio.Show();
-                inicio.rol = con.Login(txtUser.Text, txtPass.Text);
+                inicio.rol = true;
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Datos incorrectos");
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

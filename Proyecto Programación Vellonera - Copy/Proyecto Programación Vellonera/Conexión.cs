@@ -84,8 +84,7 @@ namespace Proyecto_Programación_Vellonera
         {
             DataTable dt = new DataTable();
             dt = consulta("Select * from Login where userName='" + user + "' and pass='" + pass + "'");
-            dt.TableName = "Login";
-            MessageBox.Show(dt.Rows.Count.ToString());
+            dt.TableName = "Login";          
             if (dt.Rows.Count > 0)
             {
                 return true;

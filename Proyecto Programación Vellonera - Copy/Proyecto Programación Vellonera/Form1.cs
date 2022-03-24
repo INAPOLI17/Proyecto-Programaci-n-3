@@ -7,7 +7,7 @@ namespace Proyecto_Programación_Vellonera
     {
         //WMPLib.WindowaMediaPlayer wplayer;
         Conexión con = new Conexión();
-        public bool rol;
+        public string rol;
         public  Form1() 
         {
             InitializeComponent();
@@ -53,41 +53,67 @@ namespace Proyecto_Programación_Vellonera
             string sqlUrl = "Select * from Cancion";
             dataGridView1.DataSource = con.consulta(sqlUrl);
 
-            ClaDatos permiso = new ClaDatos();
             
-            //if( con.Login(permiso) =)
-             //{
-                    panelReportes.Visible = rol;
-                    //panelToken.Visible = rol;
-                    //panelReportes.Visible = rol;
-                    //label4.Visible = rol;
-            // } 
+            
+            if( rol == "Ray")
+             {
+                btnRorte.Visible=true;
+            }
+            else
+            {               
+                btnRorte.Visible = false;
+            }
             
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Reporte rep = new Reporte();
-            rep.Show();
+            
         }
 
         private void Musica_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void panelReportes_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void btnmusica_Click(object sender, EventArgs e)
         {
             Musica musica = new Musica();
             musica.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnCliente_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
             cliente.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnToken_Click(object sender, EventArgs e)
         {
             Token token = new Token();
             token.Show();
+        }
 
+        private void btnRorte_Click(object sender, EventArgs e)
+        {
+            Reporte rep = new Reporte();
+            rep.Show();
         }
     }
 }

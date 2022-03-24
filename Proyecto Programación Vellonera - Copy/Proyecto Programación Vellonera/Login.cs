@@ -24,7 +24,7 @@ namespace Proyecto_Programación_Vellonera
                 
                 Form1 inicio = new Form1();
                 inicio.Show();
-                inicio.rol = true;
+                inicio.rol = txtUser.Text;
                 this.Hide();
             }
             else

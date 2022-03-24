@@ -48,7 +48,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(470, 426);
+            this.groupBox1.Size = new System.Drawing.Size(480, 412);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generador Token";
@@ -62,7 +62,7 @@
             this.dgvDesc.AllowUserToResizeRows = false;
             this.dgvDesc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDesc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDesc.Location = new System.Drawing.Point(34, 138);
+            this.dgvDesc.Location = new System.Drawing.Point(52, 138);
             this.dgvDesc.Name = "dgvDesc";
             this.dgvDesc.RowTemplate.Height = 25;
             this.dgvDesc.Size = new System.Drawing.Size(395, 111);
@@ -70,10 +70,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(34, 339);
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(125, 269);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(399, 54);
+            this.button1.Size = new System.Drawing.Size(242, 54);
             this.button1.TabIndex = 4;
             this.button1.Text = "GENERAR TOKEN";
             this.button1.UseVisualStyleBackColor = false;
@@ -90,18 +90,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 64);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(70, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 26);
+            this.label1.Size = new System.Drawing.Size(92, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Selecionar Clase";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbClase
             // 
+            this.cmbClase.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbClase.FormattingEnabled = true;
-            this.cmbClase.Location = new System.Drawing.Point(189, 61);
+            this.cmbClase.Location = new System.Drawing.Point(168, 86);
             this.cmbClase.Name = "cmbClase";
-            this.cmbClase.Size = new System.Drawing.Size(244, 34);
+            this.cmbClase.Size = new System.Drawing.Size(244, 23);
             this.cmbClase.TabIndex = 0;
             this.cmbClase.SelectedIndexChanged += new System.EventHandler(this.cmbClase_SelectedIndexChanged);
             // 
@@ -109,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 424);
+            this.ClientSize = new System.Drawing.Size(504, 367);
             this.Controls.Add(this.groupBox1);
             this.Name = "Token";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

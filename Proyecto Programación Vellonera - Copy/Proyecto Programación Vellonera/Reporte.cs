@@ -128,5 +128,10 @@ namespace Proyecto_Programación_Vellonera
                 }
             }
         }
+
+        private void Reporte_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

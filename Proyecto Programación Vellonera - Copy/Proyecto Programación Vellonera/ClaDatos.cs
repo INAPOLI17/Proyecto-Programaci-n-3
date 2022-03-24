@@ -30,5 +30,7 @@ namespace Proyecto_Programación_Vellonera
         public string Album { get; set; }
         public string link { get; set; }
 
+
+
     }
 }

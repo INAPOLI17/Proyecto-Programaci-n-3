@@ -83,17 +83,34 @@ namespace Proyecto_Programación_Vellonera
         public bool Login(string user, string pass)
         {
             DataTable dt = new DataTable();
-            dt = consulta("Select * from Login where userName='" + user + "' and pass='" + pass+"'");
+            dt = consulta("Select * from Login where userName='" + user + "' and pass='" + pass + "'");
             dt.TableName = "Login";
             MessageBox.Show(dt.Rows.Count.ToString());
             if (dt.Rows.Count > 0)
             {
                 return true;
+                //per.permiso = bool.Parse(dt.Rows[0]["pReport"].ToString());
             }
 
-            else {
+            else
+            {
                 return false;
             }
         }
+
+        public void autorizacion( )
+            {
+               /* DataTable dt = new DataTable();
+                dt = consulta("Select * from Login where userName='" + user + "' and pass='" + pass + "'");
+                dt.TableName = "Login";
+                MessageBox.Show(dt.Rows.Count.ToString());*/
+               /* if (Login())
+                {
+                    per.permiso = bool.Parse(dt.Rows[0]["pReport"].ToString());
+                }*/
+
+            
+            }
+        
     }
 }

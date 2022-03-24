@@ -20,13 +20,14 @@ namespace Proyecto_Programación_Vellonera
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            ClaDatos permiso = new ClaDatos();
             
             
             if(con.Login(txtUser.Text,txtPass.Text) == true){
 
                 Form1 inicio = new Form1();
                 inicio.Show();
-                inicio.rol = txtUser.Text;
+                inicio.rol = con.Login(txtUser.Text, txtPass.Text);
                 this.Hide();
             }
             else

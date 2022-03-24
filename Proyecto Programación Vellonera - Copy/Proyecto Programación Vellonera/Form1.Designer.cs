@@ -31,10 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnRorte = new System.Windows.Forms.Button();
+            this.btnToken = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.btnmusica = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelReportes = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -45,10 +49,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnmusica = new System.Windows.Forms.Button();
-            this.btnCliente = new System.Windows.Forms.Button();
-            this.btnToken = new System.Windows.Forms.Button();
-            this.btnRorte = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelReportes.SuspendLayout();
@@ -83,6 +83,62 @@
             this.panel3.Size = new System.Drawing.Size(233, 551);
             this.panel3.TabIndex = 1;
             // 
+            // btnRorte
+            // 
+            this.btnRorte.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRorte.Location = new System.Drawing.Point(6, 250);
+            this.btnRorte.Name = "btnRorte";
+            this.btnRorte.Size = new System.Drawing.Size(220, 78);
+            this.btnRorte.TabIndex = 7;
+            this.btnRorte.Text = "Reporte";
+            this.btnRorte.UseVisualStyleBackColor = true;
+            this.btnRorte.Click += new System.EventHandler(this.btnRorte_Click);
+            // 
+            // btnToken
+            // 
+            this.btnToken.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnToken.Location = new System.Drawing.Point(6, 166);
+            this.btnToken.Name = "btnToken";
+            this.btnToken.Size = new System.Drawing.Size(220, 78);
+            this.btnToken.TabIndex = 6;
+            this.btnToken.Text = "Token";
+            this.btnToken.UseVisualStyleBackColor = true;
+            this.btnToken.Click += new System.EventHandler(this.btnToken_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCliente.Location = new System.Drawing.Point(6, 87);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(220, 78);
+            this.btnCliente.TabIndex = 5;
+            this.btnCliente.Text = "Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // btnmusica
+            // 
+            this.btnmusica.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnmusica.Location = new System.Drawing.Point(6, 3);
+            this.btnmusica.Name = "btnmusica";
+            this.btnmusica.Size = new System.Drawing.Size(220, 78);
+            this.btnmusica.TabIndex = 4;
+            this.btnmusica.Text = "Música";
+            this.btnmusica.UseVisualStyleBackColor = true;
+            this.btnmusica.Click += new System.EventHandler(this.btnmusica_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 61);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Vellonera";
+            // 
             // panelReportes
             // 
             this.panelReportes.Controls.Add(this.pictureBox4);
@@ -113,18 +169,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Reportes";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 61);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Vellonera";
             // 
             // panel2
             // 
@@ -211,50 +255,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnmusica
-            // 
-            this.btnmusica.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnmusica.Location = new System.Drawing.Point(6, 3);
-            this.btnmusica.Name = "btnmusica";
-            this.btnmusica.Size = new System.Drawing.Size(220, 78);
-            this.btnmusica.TabIndex = 4;
-            this.btnmusica.Text = "Musica";
-            this.btnmusica.UseVisualStyleBackColor = true;
-            this.btnmusica.Click += new System.EventHandler(this.btnmusica_Click);
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCliente.Location = new System.Drawing.Point(6, 87);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(220, 78);
-            this.btnCliente.TabIndex = 5;
-            this.btnCliente.Text = "Cliente";
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
-            // btnToken
-            // 
-            this.btnToken.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnToken.Location = new System.Drawing.Point(6, 166);
-            this.btnToken.Name = "btnToken";
-            this.btnToken.Size = new System.Drawing.Size(220, 78);
-            this.btnToken.TabIndex = 6;
-            this.btnToken.Text = "Token";
-            this.btnToken.UseVisualStyleBackColor = true;
-            this.btnToken.Click += new System.EventHandler(this.btnToken_Click);
-            // 
-            // btnRorte
-            // 
-            this.btnRorte.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRorte.Location = new System.Drawing.Point(6, 250);
-            this.btnRorte.Name = "btnRorte";
-            this.btnRorte.Size = new System.Drawing.Size(220, 78);
-            this.btnRorte.TabIndex = 7;
-            this.btnRorte.Text = "Reporte";
-            this.btnRorte.UseVisualStyleBackColor = true;
-            this.btnRorte.Click += new System.EventHandler(this.btnRorte_Click);
             // 
             // Form1
             // 

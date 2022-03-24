@@ -23,8 +23,8 @@ namespace Proyecto_Programación_Vellonera
             if(con.Login(txtUser.Text,txtPass.Text)){
                 
                 Form1 inicio = new Form1();
-                inicio.Show();
                 inicio.rol = txtUser.Text;
+                inicio.Show();
                 this.Hide();
             }
             else

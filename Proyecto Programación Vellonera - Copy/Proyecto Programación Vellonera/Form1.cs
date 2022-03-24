@@ -39,8 +39,7 @@ namespace Proyecto_Programación_Vellonera
         }
 
         private void button4_Click(object sender, EventArgs e)
-        {
-            //folderBrowserDialog1 = new FolderBrowserDialog();
+        {           
             openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = "C:\\Hits";
             openFileDialog1.ShowDialog();
@@ -50,18 +49,23 @@ namespace Proyecto_Programación_Vellonera
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            btnRorte.BackColor = Color.AntiqueWhite;
+            btnCliente.BackColor = Color.AntiqueWhite;
+            btnmusica.BackColor = Color.AntiqueWhite;
+            btnToken.BackColor = Color.AntiqueWhite;
+
             string sqlUrl = "Select * from Cancion";
             dataGridView1.DataSource = con.consulta(sqlUrl);
-
-            
-            
+                        
             if( rol == "Ray")
              {
-                btnRorte.Visible=true;
+                btnRorte.Enabled = true;
+                btnRorte.BackColor = Color.AntiqueWhite;
             }
             else
             {               
-                btnRorte.Visible = false;
+                btnRorte.Enabled = false;
+                btnRorte.BackColor = Color.Gray;
             }
             
         }
